@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Habit Tracker</title>
+</head>
+<body>
+    <h1>My Habits</h1>
+    <ul>
+        {% for habit in habits %}
+            <li>{{ habit.name }} — created on {{ habit.created_at }}</li>
+        {% empty %}
+            <li>No habits yet. Add one from the admin page.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
