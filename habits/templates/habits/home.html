@@ -13,5 +13,12 @@
             <li>No habits yet. Add one from the admin page.</li>
         {% endfor %}
     </ul>
+    <h2>Add a new habit</h2>
+      <form method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Add Habit</button>
+      </form>
+      <hr>
 </body>
 </html>
