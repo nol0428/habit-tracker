@@ -8,11 +8,9 @@ class Habit(models.Model):
 
     def __str__(self):
         return self.name
-
 class Record(models.Model):
-    habit = models.ForeignKey(Habit, on_delete=models.CASCADE)
-    completed_at = models.DateTimeField(null=True, blank=True)
-    done = models.BooleanField(default=False)
+    habit = models.ForeignKey('Habit', on_delete=models.CASCADE, related_name='records')
+    completed_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.habit.name} — {'Done' if self.done else 'Pending'}"
+        return f"{self.habit.name} - {self.completed_at.strftime('%Y-%m-%d %H:%M')}"
