@@ -1,0 +1,49 @@
+body {
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    font-family: 'Inter', sans-serif;
+}
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.btn {
+    transition: transform 0.1s ease-in-out;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+.btn-primary {
+    background-color: #4F46E5;
+    border: none;
+    border-radius: 10px;
+}
+.btn-primary:hover {
+    background-color: #4338CA;
+}
+.btn-success {
+    border-radius: 10px;
+}
+.btn-outline-danger {
+    border-radius: 10px;
+}
+.habit-item {
+    background-color: white;
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.habit-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.habit-info {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+.emoji {
+    font-size: 1.4rem;
+}
