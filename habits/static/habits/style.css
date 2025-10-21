@@ -64,6 +64,8 @@ body {
   border-radius: 16px;
   transition: all 0.25s ease;
   color: #2d3436;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 .stat-total {
@@ -90,4 +92,39 @@ body {
 .stat-card h6 {
   font-weight: 600;
   letter-spacing: 0.3px;
+}
+/* --- Dashboard Animation --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stat-card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+/* --- Glow animation for Done button --- */
+@keyframes glowSuccess {
+  0% {
+    box-shadow: 0 0 0 rgba(72, 187, 120, 0);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(72, 187, 120, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(72, 187, 120, 0);
+  }
+}
+
+.btn-success.clicked {
+  animation: glowSuccess 0.6s ease;
 }
